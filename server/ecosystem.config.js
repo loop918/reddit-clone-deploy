@@ -1,6 +1,6 @@
 module.exports = {
     apps: [{
-        name: "reddit-client",
+        name: "reddit-server",
         script : "npm run start:prod"
     }]
 }
