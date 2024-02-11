@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build:dev": "env-cmd -f .env.development next build",
+    "build:prod": "env-cmd -f .env.production next build",
+    "start:dev": "env-cmd -f .env.development next start",
+    "start:prod": "env-cmd -f .env.production next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -14,10 +16,12 @@
     "classnames": "^2.5.1",
     "cors": "^2.8.5",
     "dayjs": "^1.11.10",
+    "env-cmd": "^10.1.0",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
+    "sharp": "^0.33.2",
     "swr": "^2.2.4"
   },
   "devDependencies": {

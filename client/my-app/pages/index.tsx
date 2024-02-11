@@ -18,7 +18,7 @@ const Home: NextPage = () => {
     return await axios.get(url).then(res => res.data)
   }
   */
-  const address = "http://localhost:4000/api/subs/sub/topsSubs";
+  const address = "/subs/sub/topsSubs";
   const { data: topSubs } =  useSWR<Sub[]>( address ); // url, fetcher
   //SWR END
 

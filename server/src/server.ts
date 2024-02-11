@@ -18,6 +18,7 @@ app.use(cookieParser());
 dotenv.config();
 
 const origin = process.env.ORIGIN;
+
 app.use(
     cors({
         origin,
@@ -36,9 +37,9 @@ app.use(express.static("public")) // 이미지 안보일때. 정적인 파일을
 
 // Server Start
 app.listen(process.env.PORT, async () => {
-    console.log(`Server running at http://localhost:${process.env.PORT}`);
+    console.log(`Server running at ${origin}`);
     // DB Connection
     AppDataSource.initialize().then(() => {
-        console.log("Database connected...");
+        console.log("Database connected!!");
     }).catch(error => console.log(error));
 })
